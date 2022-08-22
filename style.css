@@ -36,29 +36,269 @@ body {
 .sidebar {
     grid-row: 1 / -1;
     grid-column: 1;
-    background-color: #2563eb;
+    background-color: #0284c7;
     color: white;
-    padding: 20px;
+    padding: 10px 30px 0 15px;
+    font-size: 19px;
 }
 
 .sidebar a {
     color: white;
 }
 
+.sidebar h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
 .dashboard-container, .sidebar a {
     display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboard-container {
+    gap: 5px;
+}
+
+li + li {
+    margin-top: 20px;
+}
+
+.sidebar .more-margin-bottom {
+    margin-bottom: 40px;
+}
+
+.sidebar svg {
+    color: white;
 }
 
 .header {
     grid-row: 1;
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    background-color: white;
+    color: black;
+    /* box-shadow: 10px 10px 50px black; */
+}
+
+.upper-header, .lower-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+    gap: 30px;
+}
+
+.header .user-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 35px;
+}
+
+.user-name.large {
+    font-size: 20px;
+}
+
+input[type='search'] {
+    appearance: none;
+    width: 70%;
+    height: 30px;
+    padding: 5px 10px;
+    font-family: roboto;
+    font-size: 16px;
+    background-color: #d2d7da;
+    border: 1px rgba(0, 0, 0, 0) solid;
+    border-radius: 15px;
+}
+
+input[type='search']:focus {
+    border: 1px rgba(0, 0, 0, 0) solid;
+}
+
+div.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+div.user-image {
+    background-color: #bae6fd;
+    background-image: url(./images/pikachu_48x48.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 50%;
+}
+
+div.user-image.small{
+    height: 52px;
+    width: 52px;
+    background-size: 40px 40px;
+}
+
+.user-image.large {
+    height: 70px;
+    width: 70px;
+    background-size: 50px 50px
+}
+
+.greeting {
+    flex: 1;
+}
+
+.greeting .greet-text {
+    font-size: 13px;
+}
+
+.lower-header button {
+    background-color: #0284c7;
+    color: white;
+    padding: 10px 30px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.lower-header button:hover {
+    background-color: #036a9e;
 }
 
 .main-area {
     grid-row: 2;
     grid-column: 2;
+    background-color: #e5e7eb;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 30px 30px 40px 20px;
 }
 
-svg {
-    color: white;
+.projects-area {
+    grid-row: 1 / -1;
+    grid-column: 1;
 }
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, 500px); */
+    gap: 30px;
+}
+
+.project {
+    background-color: white;
+    padding: 30px 15px;
+    border-left: 10px solid #eab308;
+    border-radius: 15px;
+    height: 250px;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+
+    box-shadow: 2px 2px 4px rgb(155, 155, 155);
+}
+
+.project h3 {
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.project p {
+    color: #6b7280;
+}
+
+.project-functions {
+    align-self: end;
+    justify-self: end;
+    display: flex;
+    gap: 20px;
+}
+
+.subheading {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.announcements-area {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.announcements {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.announcement p {
+    color: gray;
+    font-size: 12px;
+}
+
+.announcements .announcement .ann-heading {
+    color: black;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.announcement + .announcement {
+    padding-top: 10px;
+}
+
+.announcement:not(.last-ann) {
+    padding-bottom: 10px;
+    border-bottom: 2px #d1d5db solid;
+}
+
+.trending-area {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.trending {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.trend + .trend {
+    margin-top: 15px;
+}
+
+.trend div {
+    font-size: 12px;
+}
+
+.trending-project-name {
+    color: gray;
+    margin-top: 3px;
+}
+
+#trend-1 {
+    background-image: url(./images/bulbasaur_256x256.jpg);
+}
+
+#trend-2 {
+    background-image: url(./images/pok_237x243.png);
+}
+
+
+
+.main-area .project-functions svg {
+    color: #374151;
+}
+
+
