@@ -18,6 +18,10 @@ a {
     text-decoration: none;
 }
 
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
 @font-face {
     font-family: roboto;
     src: url(./fonts/Roboto/Roboto-Medium.ttf);
