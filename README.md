@@ -4,7 +4,6 @@
 [Click here](https://saad-hu.github.io/project-admin-dashboard/) for a live demo.
 
 ## Screenshots
-### Desktop View
 ![](/images/dashboard-demo.png)
 
 ## Description and Outcome
