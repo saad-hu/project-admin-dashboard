@@ -5,7 +5,7 @@
 
 ## Screenshots
 ### Desktop View
-![](/images/dashbaord-demo.png)
+![](/images/dashboard-demo.png)
 
 ## Description and Outcome
 User login dashboard designed with CSS Grid layout. Build using vanilla CSS and HTML.
